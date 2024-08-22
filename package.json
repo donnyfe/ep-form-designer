@@ -1,0 +1,42 @@
+{
+	"name": "@idesigner/element-plus",
+	"description": "基于vue3和element-plus的表单设计器",
+	"version": "1.0.0",
+	"type": "module",
+	"module": "./dist/index.es.js",
+	"main": "./dist/index.umd.js",
+	"exports": {
+		".": {
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.umd.js"
+		},
+		"./*": "./*"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"keywords": [
+		"form-designer",
+		"element-plus",
+		"Element-Plus"
+	],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"ace-builds": "^1.35.4",
+		"vue3-ace-editor": "^2.2.4",
+		"vuedraggable": "^4.1.0",
+		"wangeditor": "^4.7.15"
+	},
+	"devDependencies": {
+		"@unocss/transformer-directives": "^0.62.2",
+		"@vitejs/plugin-vue": "^5.1.2",
+		"sass": "^1.77.8",
+		"unocss": "^0.62.2",
+		"vite": "^5.4.1",
+		"vue": "^3.4.38",
+		"element-plus": "^2.8.0"
+	}
+}
