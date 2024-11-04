@@ -1,17 +1,17 @@
-import BaseControl from "../BaseControl";
-import Renderer from "./Renderer.vue";
-import PropEditor from "./PropsEditor.vue";
-import Viewer from "./Viewer.vue";
+import BaseControl from '../BaseControl'
+import Renderer from './Renderer.vue'
+import PropEditor from './PropsEditor.vue'
+import Viewer from './Viewer.vue'
 
 class Control extends BaseControl {
 	constructor() {
-		super("slider", "滑块");
-		this.dataType = "number";
+		super('slider', '滑块')
+		this.dataType = 'number'
 		this.props = {
 			width: 12,
 			showLabel: true,
 			labelWidth: undefined,
-			label: "滑块",
+			label: '滑块',
 			defaultValue: 0,
 			disabled: false,
 			required: false,
@@ -21,10 +21,10 @@ class Control extends BaseControl {
 			showInput: false,
 			showStops: false,
 			showTooltip: true,
-			customClass: "",
-		};
+			customClass: ''
+		}
 	}
 }
-Control.type = "slider";
-Control.label = "滑块";
-export default { Control, Renderer, PropEditor, Viewer };
+Control.type = 'slider'
+Control.label = '滑块'
+export default { Control, Renderer, PropEditor, Viewer }

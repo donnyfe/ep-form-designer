@@ -1,10 +1,15 @@
 {
-	"name": "@idesigner/element-plus",
+	"name": "@amazejs/elp-form-designer",
 	"description": "基于vue3和element-plus的表单设计器",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"type": "module",
+	"author": "donnyfe",
+	"license": "MIT",
 	"module": "./dist/index.es.js",
 	"main": "./dist/index.umd.js",
+	"files": [
+		"dist"
+	],
 	"exports": {
 		".": {
 			"import": "./dist/index.es.js",
@@ -14,29 +19,31 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
+		"build": "vite build && npm run deploy",
+		"preview": "vite preview",
+		"deploy": "node deploy.js",
+		"format": "prettier --write src/**/*.{js,vue}"
 	},
 	"keywords": [
 		"form-designer",
 		"element-plus",
 		"Element-Plus"
 	],
-	"author": "",
-	"license": "ISC",
 	"dependencies": {
-		"ace-builds": "^1.35.4",
+		"ace-builds": "^1.36.3",
 		"vue3-ace-editor": "^2.2.4",
 		"vuedraggable": "^4.1.0",
 		"wangeditor": "^4.7.15"
 	},
 	"devDependencies": {
-		"@unocss/transformer-directives": "^0.62.2",
-		"@vitejs/plugin-vue": "^5.1.2",
-		"sass": "^1.77.8",
-		"unocss": "^0.62.2",
-		"vite": "^5.4.1",
-		"vue": "^3.4.38",
-		"element-plus": "^2.8.0"
+		"@unocss/transformer-directives": "^0.63.6",
+		"@vitejs/plugin-vue": "^5.1.4",
+		"element-plus": "^2.8.7",
+		"prettier": "^3.3.3",
+		"sass": "^1.80.6",
+		"ssh2": "^1.16.0",
+		"unocss": "^0.63.6",
+		"vite": "^5.4.10",
+		"vue": "^3.5.12"
 	}
 }

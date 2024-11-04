@@ -1,20 +1,17 @@
 export function randomWord(randomFlag, min, max) {
-	var str = "",
+	var str = '',
 		range = min,
-		arr =
-			"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split(
-				""
-			);
+		arr = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 	// 随机产生
 	if (randomFlag) {
-		range = Math.round(Math.random() * (max - min)) + min;
+		range = Math.round(Math.random() * (max - min)) + min
 	}
 	for (let i = 0; i < range; i++) {
-		let pos = Math.round(Math.random() * (arr.length - 1));
-		str += arr[pos];
+		let pos = Math.round(Math.random() * (arr.length - 1))
+		str += arr[pos]
 	}
-	return str;
+	return str
 }
 
 // 解决JSON.stringify和JSON.parse不能转换RegExp的问题
@@ -28,14 +25,14 @@ export function parseJson(jsonStr) {
 		try {
 			// 将正则字符串转成正则对象
 			if (eval(v) instanceof RegExp) {
-				return eval(v);
+				return eval(v)
 			}
 		} catch (e) {
 			// nothing
 		}
 
-		return v;
-	});
+		return v
+	})
 }
 
 /**
@@ -48,10 +45,10 @@ export function stringifyJson(json) {
 		(k, v) => {
 			// 将正则对象转换为正则字符串
 			if (v instanceof RegExp) {
-				return v.toString();
+				return v.toString()
 			}
-			return v;
+			return v
 		},
 		2
-	);
+	)
 }

@@ -1,10 +1,14 @@
 <script setup>
-defineProps({
-	control: Object,
-})
+	defineProps({
+		control: Object
+	})
 </script>
 
 <template>
-	<el-divider :border-style="control.props.borderStyle" :content-position="control.props.contentPosition">{{
-		control.props.content }}</el-divider>
+	<el-divider
+		:border-style="control.props.borderStyle"
+		:content-position="control.props.contentPosition"
+	>
+		{{ control.props.content }}
+	</el-divider>
 </template>

@@ -1,19 +1,19 @@
-import BaseControl from "../BaseControl";
-import Renderer from "./Renderer.vue";
-import PropEditor from "./PropsEditor.vue";
-import Viewer from "./Viewer.vue";
+import BaseControl from '../BaseControl'
+import Renderer from './Renderer.vue'
+import PropEditor from './PropsEditor.vue'
+import Viewer from './Viewer.vue'
 
 class Control extends BaseControl {
 	constructor() {
-		super("inputnumber", "数字框");
-		this.dataType = "number";
+		super('inputnumber', '数字框')
+		this.dataType = 'number'
 		this.props = {
 			width: 12,
 			showLabel: true,
 			labelWidth: undefined,
-			label: "数字框",
+			label: '数字框',
 			defaultValue: 0,
-			placeholder: "",
+			placeholder: '',
 			disabled: false,
 			min: 0,
 			max: 100,
@@ -21,11 +21,11 @@ class Control extends BaseControl {
 			stepStrictly: false,
 			precision: 0,
 			controls: true,
-			controlsPosition: "",
-			customClass: "",
-		};
+			controlsPosition: '',
+			customClass: ''
+		}
 	}
 }
-Control.type = "inputnumber";
-Control.label = "数字框";
-export default { Control, Renderer, PropEditor, Viewer };
+Control.type = 'inputnumber'
+Control.label = '数字框'
+export default { Control, Renderer, PropEditor, Viewer }

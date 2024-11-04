@@ -1,8 +1,8 @@
 <script setup>
-defineProps({
-	control: Object,
-	model: Object,
-})
+	defineProps({
+		control: Object,
+		model: Object
+	})
 </script>
 
 <template>
