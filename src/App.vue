@@ -1,10 +1,8 @@
 <script setup>
 	import { ref } from 'vue'
-	import FormDesigner from './components/form-designer/designer/index.vue'
+	import FormDesigner from './components/designer/index.vue'
 
-	let data = ref({})
-
-	data.value = {
+	let data = ref({
 		controls: [
 			{
 				type: 'input',
@@ -289,10 +287,10 @@
 			customClass: '',
 			cols: 12
 		}
-	}
+	})
 
 	let uploadOptions = {
-		action: 'http://localhost:8888/api/upload/files',
+		action: 'http://0.0.0.0:8888/api/upload/files',
 		getHeaders: function () {
 			return { token: '123' }
 		},
@@ -338,14 +336,20 @@
 </script>
 
 <template>
+<div id="app">
 	<FormDesigner
-		:controlGroups="controlGroups"
-		:uploadOptions="uploadOptions"
-		:formData="data"
+		:control-groups="controlGroups"
+		:upload-options="uploadOptions"
+		:form-data="data"
 	></FormDesigner>
+</div>
 </template>
 
 <style>
+	:root {
+		--app-height: 100vh;
+	}
+
 	html,
 	body {
 		margin: 0;
@@ -353,6 +357,6 @@
 	}
 
 	#app {
-		height: 100vh;
+		height: var(--app-height);
 	}
 </style>

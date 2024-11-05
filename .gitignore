@@ -33,5 +33,7 @@ dist
 # 临时文件
 .tmp
 
-deploy.js
+playground/node_modules/
+
+ssh.config.js
 dist.tar.gz
