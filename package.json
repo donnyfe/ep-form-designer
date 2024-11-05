@@ -1,7 +1,7 @@
 {
 	"name": "@idonnyfe/ep-form-designer",
 	"description": "基于vue3和element-plus的表单设计器",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"type": "module",
 	"author": "donnyfe",
 	"main": "./dist/index.umd.js",
@@ -30,7 +30,7 @@
 		"dev": "vite",
 		"build": "vite build --config vite.lib.config.js",
 		"preview": "vite preview",
-		"deploy": "npm run build && node deploy.js",
+		"deploy": "npm run build && node ./deploy/index.js",
 		"format": "prettier --write src/**/*.{js,vue}"
 	},
 	"dependencies": {
@@ -42,6 +42,7 @@
 	"devDependencies": {
 		"@unocss/transformer-directives": "^0.63.6",
 		"@vitejs/plugin-vue": "^5.1.4",
+		"dotenv": "^16.4.5",
 		"element-plus": "^2.8.7",
 		"prettier": "^3.3.3",
 		"sass": "^1.80.6",

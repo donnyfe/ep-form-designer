@@ -34,6 +34,5 @@ dist
 .tmp
 
 playground/node_modules/
-
-ssh.config.js
+.env
 dist.tar.gz
