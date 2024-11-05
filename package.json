@@ -1,14 +1,14 @@
 {
-	"name": "@amazejs/elp-form-designer",
+	"name": "@idonnyfe/ep-form-designer",
 	"description": "基于vue3和element-plus的表单设计器",
-	"version": "0.0.0",
+	"version": "0.0.5",
 	"type": "module",
 	"author": "donnyfe",
-	"license": "MIT",
-	"module": "./dist/index.es.js",
 	"main": "./dist/index.umd.js",
+	"module": "./dist/index.es.js",
 	"files": [
-		"dist"
+		"dist",
+		"playground"
 	],
 	"exports": {
 		".": {
@@ -17,18 +17,22 @@
 		},
 		"./*": "./*"
 	},
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build && npm run deploy",
-		"preview": "vite preview",
-		"deploy": "node deploy.js",
-		"format": "prettier --write src/**/*.{js,vue}"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/donnyfe/ep-form-designer.git"
 	},
 	"keywords": [
 		"form-designer",
 		"element-plus",
 		"Element-Plus"
 	],
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build --config vite.lib.config.js",
+		"preview": "vite preview",
+		"deploy": "npm run build && node deploy.js",
+		"format": "prettier --write src/**/*.{js,vue}"
+	},
 	"dependencies": {
 		"ace-builds": "^1.36.3",
 		"vue3-ace-editor": "^2.2.4",
@@ -42,6 +46,7 @@
 		"prettier": "^3.3.3",
 		"sass": "^1.80.6",
 		"ssh2": "^1.16.0",
+		"terser": "^5.36.0",
 		"unocss": "^0.63.6",
 		"vite": "^5.4.10",
 		"vue": "^3.5.12"
