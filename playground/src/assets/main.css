@@ -1,0 +1,7 @@
+@use './base.css';
+
+#app {
+	height: var(--app-height);
+}
+
+
