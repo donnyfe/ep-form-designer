@@ -14,8 +14,8 @@ const app = createApp(App)
 
 app.use(router)
 app.use(ElementPlus)
-app.use(FormDesigner)
-app.use(FormRenderer)
-app.use(FormViewer)
+app.use(FormDesigner.install)
+app.use(FormRenderer.install)
+app.use(FormViewer.install)
 
 app.mount('#app')

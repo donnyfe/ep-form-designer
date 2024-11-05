@@ -66418,28 +66418,17 @@ const _sfc_main = /* @__PURE__ */ Object.assign({
   }
 });
 const FormDesigner = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-e50b770c"]]);
-function installFormDesigner(app) {
+FormDesigner.install = (app) => {
   app.component(FormDesigner.name, FormDesigner);
-}
-function installFormRenderer(app) {
+};
+FormRenderer.install = (app) => {
   app.component(FormRenderer.name, FormRenderer);
-}
-function installFormViewer(app) {
+};
+FormViewer.install = (app) => {
   app.component(FormViewer.name, FormViewer);
-}
-function install(app) {
-  app.component(FormDesigner.name, FormDesigner).component(FormRenderer.name, FormRenderer).component(FormViewer.name, FormViewer);
-}
-const _export = {
-  install
 };
 export {
   FormDesigner,
   FormRenderer,
-  FormViewer,
-  _export as default,
-  install,
-  installFormDesigner,
-  installFormRenderer,
-  installFormViewer
+  FormViewer
 };
