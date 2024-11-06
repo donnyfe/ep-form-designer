@@ -65,16 +65,19 @@ export class BaseDeploy {
 						.on('close', () => {
 							this.log.info('Shell已关闭')
 							this.client.end()
-							resolve()
+							// 使用0表示正常退出, 优雅退出
+							process.exit(0)
 						})
 						.on('error', err => {
 							this.log.error('Shell执行错误')
-							reject(err)
+							// 使用非0状态码，错误退出
+							process.exit(1)
 						})
 						.end(shell.join('\n'))
 				})
 			} catch (err) {
 				this.log.error(`shell执行失败: ${err.message}`)
+				process.exit(1)
 			}
 		})
 	}

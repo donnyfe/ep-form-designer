@@ -35,4 +35,5 @@ dist
 
 playground/node_modules/
 .env
+dist
 dist.tar.gz

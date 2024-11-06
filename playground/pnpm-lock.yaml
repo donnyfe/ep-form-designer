@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@idonnyfe/ep-form-designer':
-        specifier: ^0.0.4
-        version: 0.0.4(vue@3.5.12)
+        specifier: ^0.0.6
+        version: 0.0.6(vue@3.5.12)
       element-plus:
         specifier: ^2.8.7
         version: 2.8.7(vue@3.5.12)
@@ -211,8 +211,8 @@ packages:
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
 
-  '@idonnyfe/ep-form-designer@0.0.4':
-    resolution: {integrity: sha512-lqK6OKAvkTmmHTAx5u0VpLx5qhUulzkuvJLXgMJKk3uSQ1ndoIm0j9SiytOpI8Iv2TJHcHOJhZm0+vew3KFLlg==}
+  '@idonnyfe/ep-form-designer@0.0.6':
+    resolution: {integrity: sha512-hSl1hHMlj3X6n3CgM8gjLKXf03H674Rdytw/BNYdpUe5z95ZzUWVtZ+XcvrtEgqME6Uk/L5I16NQYIcqAYXh/Q==}
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
@@ -653,7 +653,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.8': {}
 
-  '@idonnyfe/ep-form-designer@0.0.4(vue@3.5.12)':
+  '@idonnyfe/ep-form-designer@0.0.6(vue@3.5.12)':
     dependencies:
       ace-builds: 1.36.4
       vue3-ace-editor: 2.2.4(ace-builds@1.36.4)(vue@3.5.12)
