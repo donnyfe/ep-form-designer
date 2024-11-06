@@ -30,7 +30,7 @@
 		"dev": "vite",
 		"build": "vite build --config vite.lib.config.js",
 		"preview": "vite preview",
-		"deploy": "npm run build && node ./deploy/index.js",
+		"deploy": "npm run build && node ./scripts/deploy/index.js",
 		"format": "prettier --write src/**/*.{js,vue}"
 	},
 	"dependencies": {

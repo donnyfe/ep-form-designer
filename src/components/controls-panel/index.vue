@@ -1,37 +1,37 @@
 <script setup lang="ts">
-	import { ref } from 'vue'
-	import draggable from 'vuedraggable/src/vuedraggable'
+import { ref } from 'vue'
+import draggable from 'vuedraggable/src/vuedraggable'
 import SvgIcon from '@/components/icons/index.vue'
 
-	let props = defineProps({
-		controlGroups: {
-			type: Array,
-			required: true
-		},
-		formData: {
-			type: Object,
-			required: true
-		}
-	})
-
-	// 默认展开所有折叠面板
-	const groupNames = props.controlGroups.map(group => group.name)
-	const activeNames = ref(groupNames)
-
-	let emit = defineEmits(['click'])
-
-	// 添加控件
-	function addControls(ctlType) {
-		let control = new ctlType()
-		props.formData.controls.push(control)
-		emit('click', control)
+let props = defineProps({
+	controlGroups: {
+		type: Array,
+		required: true
+	},
+	formData: {
+		type: Object,
+		required: true
 	}
+})
 
-	// 克隆控件
-	function clone(ctlType) {
-		let control = new ctlType()
-		return control
-	}
+// 默认展开所有折叠面板
+const groupNames = props.controlGroups.map(group => group.name)
+const activeNames = ref(groupNames)
+
+let emit = defineEmits(['click'])
+
+// 添加控件
+function addControls(ctlType) {
+	let control = new ctlType()
+	props.formData.controls.push(control)
+	emit('click', control)
+}
+
+// 克隆控件
+function clone(ctlType) {
+	let control = new ctlType()
+	return control
+}
 </script>
 
 <template>
