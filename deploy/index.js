@@ -35,10 +35,10 @@ const serverOptions = {
 		username: process.env.SSH_USERNAME,
 		password: process.env.SSH_PASSWORD
 	},
-	rootPath: '/root/web/ep-form-designer',
+	rootPath: process.env.ROOT_PATH,
 	files: ['dist.tar.gz'],
 	shell: [
-		'cd /root/web/ep-form-designer',
+		`cd ${process.env.ROOT_PATH}`,
 		'rm -rf dist',
 		'tar zxvf dist.tar.gz',
 		'rm -rf dist.tar.gz',
